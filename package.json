@@ -7,7 +7,7 @@
     "subscribe",
     "mailchimp"
   ],
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "React Component - card form to subscribe users to a newsletter and other lists",
   "author": "Thomas Wang <thomas@wang.sh>",
   "license": "MIT",
@@ -73,7 +73,6 @@
     "dist"
   ],
   "dependencies": {
-    "net": "^1.0.2",
     "react-mailchimp-subscribe": "^2.1.0",
     "styled-components": "^4.4.0"
   }
