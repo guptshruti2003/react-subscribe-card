@@ -24,7 +24,8 @@
     "css",
     "es",
     "lib",
-    "umd"
+    "umd",
+    "src"
   ],
   "scripts": {
     "build": "nwb build-react-component",
