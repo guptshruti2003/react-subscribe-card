@@ -3,7 +3,51 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
-export const Mailchimp = MailchimpSubscribe
+
+const SubscribeCard = ({
+  subURL,
+  outerCardStyle,
+  innerCardStyle,
+  titleStyle,
+  descriptionStyle,
+  subContainerStyle,
+  subInputStyle,
+  subButtonStyle,
+  responseStyle
+}) => (
+  <MailchimpSubscribe
+    url={subURL}
+    render={({ subscribe, status, message }) => (
+      <NewsletterForm
+        status={status}
+        message={message}
+        onValidated={formData => subscribe(formData)}
+        outerCard={outerCardStyle}
+        innerCard={innerCardStyle}
+        title={titleStyle}
+        description={descriptionStyle}
+        subContainer={subContainerStyle}
+        subInput={subInputStyle}
+        subButton={subButtonStyle}
+        response={responseStyle}
+      />
+    )}
+  />
+)
+
+SubscribeCard.propTypes = {
+  subURL: PropTypes.string,
+  outerCardStyle: PropTypes.string,
+  innerCardStyle: PropTypes.string,
+  titleStyle: PropTypes.string,
+  descriptionStyle: PropTypes.string,
+  subContainerStyle: PropTypes.string,
+  subInputStyle: PropTypes.string,
+  subButtonStyle: PropTypes.string,
+  responseStyle: PropTypes.string
+}
+
+export default SubscribeCard
 
 const NewsletterForm = ({
   status,
@@ -87,8 +131,6 @@ NewsletterForm.propTypes = {
   subButton: PropTypes.string,
   response: PropTypes.string
 }
-
-export default NewsletterForm
 
 const FormWrapper = styled.div`
   box-sizing: border-box;

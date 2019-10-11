@@ -1,31 +1,202 @@
-# react-subscribe-card
+# React Subscribe Card
 
-> React Component - card form to subscribe users to a newsletter and other lists
+> React Subscribe Card
 
 [![NPM](https://img.shields.io/npm/v/react-subscribe-card.svg)](https://www.npmjs.com/package/react-subscribe-card) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
+## Requirements
+
+Requires React and a Mailchimp account!
+
+## Installation
 
 ```bash
+yarn add react-subscribe-card
+# or
 npm install --save react-subscribe-card
 ```
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
+```
+# ES6 import
+import GradientButton from 'react-native-gradient-buttons';
+```
 
-import MyComponent from 'react-subscribe-card'
+## Props
 
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+- `subURL`: `String`
+  - To get your Mailchimp subscription URL, go to Mailchimp Form Builder > select Embedded forms > look at embedded HTML and copy the `action` URL in the `<form>`.
+
+#### The following props are strings, but you must format as CSS to override the default styles
+
+This component is styled using styled-components. Reference the [styled-components website](https://www.styled-components.com/) to see more on specific formatting. You can [nest rules just like Sass](https://www.styled-components.com/docs/faqs#can-i-nest-rules).
+
+- `outerCardStyle`: `String`
+
+  ```js
+  // default
+  `box-sizing: border-box;
+    position: relative;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 48px auto;
+    max-width: 90%;
+    width: 550px;`;
+  ```
+
+- `innerCardStyle`: `String`
+
+  ```js
+  // default
+  `background-color: #fdfdfd;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 0;`;
+  ```
+
+- `titleStyle`: `String`
+
+  ```js
+  // default
+  `font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  text-align: left;
+  word-break: break-word;`;
+  ```
+
+- `descriptionStyle`: `String`
+
+  ```js
+  // default
+  `font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0 0 10px 0;
+  text-align: left;`;
+  ```
+
+- `subContainerStyle`: `String`
+
+  ```js
+  // default
+  `display: flex;
+  
+  @media all and (max-width: 500px) {
+    flex-direction: column;
+  }`;
+  ```
+
+- `subInputStyle`: `String`
+
+  ```js
+  // default
+  `font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background-color: #fdfdfd;
+  color: #333333;
+  border-color: #f2f2f2;
+  border-style: solid;
+  border-width: 5px;
+  font-size: 16px;
+  height: 40px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  width: 70%;
+  max-width: 100%;
+  margin-right: 16px;
+  
+  @media all and (max-width: 500px) {
+    width: 100%;
+  }`;
+  ```
+
+- `subButtonStyle`: `String`
+
+  ```js
+  // default
+  `font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  border: none;
+  border-radius: 25px;
+  box-shadow: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  
+  &:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
+  }`;
+  ```
+
+- `responseStyle`: `String`
+  ```js
+  // default
+  `font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  margin: 0;
+  margin-top: 4px;`;
+  ```
+
+## Example
+
+![example](./example.png)
+
+```js
+import React from "react";
+import SubscribeCard from "react-subscribe-card";
+
+const subURL = `[Your Mailchimp subscription URL]`;
+
+const outerCardStyle = `
+      padding: 0;
+      box-shadow: 0px 5px 35px 0px rgba(50, 50, 93, 0.17);
+    `;
+const subContainerStyle = `
+      box-shadow: 0 2px 5px -1px rgba(50,50,93,.25), 0 1px 3px -1px rgba(0,0,0,.3);
+      align-items: center;
+    `;
+const subInputStyle = `
+      border-width: 0;
+      margin: 0;
+    `;
+const subButtonStyle = `
+      border-radius: 0;
+      flex-grow: 1;
+      background-color: #fdfdfd;
+      color: #000000;
+    `;
+
+const App = () => (
+  <div>
+    <SubscribeCard
+      subURL={subURL}
+      outerCardStyle={outerCardStyle}
+      subContainerStyle={subContainerStyle}
+      subInputStyle={subInputStyle}
+      subButtonStyle={subButtonStyle}
+    />
+  </div>
+);
+
+export default App;
 ```
 
 ## License
 
-MIT © [](https://github.com/)
+MIT © [thomaswangio](https://github.com/thomaswangio)
