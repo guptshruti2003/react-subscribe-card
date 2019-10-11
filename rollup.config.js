@@ -36,6 +36,6 @@ export default {
     resolve(),
     commonjs()
   ],
-  external: ['styled-components'],
+  external: ['styled-components', 'fs'],
   globals: { 'styled-components': 'styled' }
 }
