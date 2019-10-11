@@ -1,7 +1,5 @@
 # React Subscribe Card
 
-> React Subscribe Card
-
 [![NPM](https://img.shields.io/npm/v/react-subscribe-card.svg)](https://www.npmjs.com/package/react-subscribe-card) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Requirements
