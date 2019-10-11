@@ -72,6 +72,8 @@
     "dist"
   ],
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "net": "^1.0.2",
     "react-mailchimp-subscribe": "^2.1.0",
     "styled-components": "^4.4.0"
   }
