@@ -5,10 +5,12 @@ import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
+import builtins from 'rollup-plugin-node-builtins'
 
 import pkg from './package.json'
 
 export default {
+  preferBuiltins: true,
   input: 'src/index.js',
   output: [
     {
@@ -34,8 +36,9 @@ export default {
       plugins: ['external-helpers']
     }),
     resolve(),
-    commonjs()
+    commonjs(),
+    builtins()
   ],
-  external: ['styled-components', 'fs'],
+  external: ['styled-components'],
   globals: { 'styled-components': 'styled' }
 }
