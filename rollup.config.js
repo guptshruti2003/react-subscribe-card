@@ -5,6 +5,7 @@ import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
+import globals from 'rollup-plugin-node-globals'
 import builtins from 'rollup-plugin-node-builtins'
 
 import pkg from './package.json'
@@ -35,6 +36,7 @@ export default {
       exclude: 'node_modules/**',
       plugins: ['external-helpers']
     }),
+    globals(),
     resolve(),
     commonjs(),
     builtins()
