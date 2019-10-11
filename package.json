@@ -7,14 +7,17 @@
     "subscribe",
     "mailchimp"
   ],
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React Component - card form to subscribe users to a newsletter and other lists",
   "author": "Thomas Wang <thomas@wang.sh>",
   "license": "MIT",
   "homepage": "https://github.com/thomaswangio/react-subscribe-card",
-  "repository": "https://github.com/thomaswangio/react-subscribe-card",
+  "repository": {
+    "url": "https://github.com/thomaswangio/react-producthunt",
+    "type": "git"
+  },
   "bugs": "https://github.com/thomaswangio/react-subscribe-card/issues",
-  "typings": "./src/index.d.ts",
+  "typings": "src/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
