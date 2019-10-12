@@ -126,7 +126,7 @@ const NewsletterForm = ({
         innerCard={innerCard}
         action={tinyURL}
         method="post"
-        target="_blank"
+        target="popupwindow"
         onSubmit={submitTiny}
       >
         <FormTitle title={title}>
