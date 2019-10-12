@@ -4,7 +4,13 @@
 
 ## Requirements
 
-Requires React and a Mailchimp or TinyLetter account!
+Requires React and...
+
+1. Mailchimp account
+
+or
+
+2. TinyLetter account
 
 ## Example
 
@@ -72,7 +78,7 @@ import GradientButton from 'react-native-gradient-buttons';
   - To get your Mailchimp subscription URL, go to Mailchimp Form Builder > select Embedded forms > look at embedded HTML and copy the `action` URL in the `<form>`.
 
 - `tinyletterUsername`: `String`
-  - To use TinyLetter, use your username (`http://tinyletter.com/your-username`)
+  - Your TinyLetter username
 
 _Note: Only use `mailchimpURL` or `tinyletterUsername` prop. If you use both, `mailchimpURL` will take precedent._
 

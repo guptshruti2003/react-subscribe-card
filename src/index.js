@@ -119,9 +119,9 @@ const NewsletterForm = ({
   const tinyURL = `https://tinyletter.com/${tinyletterUsername}`;
   const submitTiny = () => {
     window.open(
-      "https://tinyletter.com/${tinyletterUsername}",
-      "popupwindow",
-      "scrollbars=yes,width=800,height=600"
+      `https://tinyletter.com/${tinyletterUsername}`,
+      `popupwindow`,
+      `scrollbars=yes,width=800,height=600`
     );
     return true;
   };
