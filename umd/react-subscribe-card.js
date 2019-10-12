@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.3.2 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.3.3 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -499,11 +499,95 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     return true;
   };
 
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "form",
+    {
+      style: "border:1px solid #ccc;padding:3px;text-align:center;",
+      action: "https://tinyletter.com/thomaswang",
+      method: "post",
+      target: "_blank",
+      onsubmit: "window.open('https://tinyletter.com/thomaswang', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 129
+      },
+      __self: _this
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "p",
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136
+        },
+        __self: _this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "label",
+        { "for": "tlemail", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 137
+          },
+          __self: _this
+        },
+        "Enter your email address"
+      )
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "p",
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: _this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", style: "width:140px", name: "email", id: "tlemail", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: _this
+      })
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "hidden", value: "1", name: "embed", __source: {
+        fileName: _jsxFileName,
+        lineNumber: 142
+      },
+      __self: _this
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "Subscribe", __source: {
+        fileName: _jsxFileName,
+        lineNumber: 143
+      },
+      __self: _this
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "p",
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 144
+        },
+        __self: _this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "a",
+        { href: "https://tinyletter.com", target: "_blank", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 145
+          },
+          __self: _this
+        },
+        "powered by TinyLetter"
+      )
+    )
+  );
+
   return tinyletterUsername ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 152
       },
       __self: _this
     },
@@ -517,7 +601,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         onSubmit: submitTiny,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 153
         },
         __self: _this
       },
@@ -525,7 +609,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 138
+            lineNumber: 160
           },
           __self: _this
         },
@@ -535,7 +619,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 141
+            lineNumber: 163
           },
           __self: _this
         },
@@ -545,25 +629,26 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 147
+            lineNumber: 169
           },
           __self: _this
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FormInput, {
           id: "tlemail",
           type: "email",
+          name: "email",
           placeholder: "Your email",
           "aria-label": "email",
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 148
+            lineNumber: 170
           },
           __self: _this
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "hidden", value: "1", name: "embed", __source: {
             fileName: _jsxFileName,
-            lineNumber: 155
+            lineNumber: 178
           },
           __self: _this
         }),
@@ -571,7 +656,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", value: "Subscribe", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 156
+              lineNumber: 179
             },
             __self: _this
           },
@@ -583,7 +668,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 163
+        lineNumber: 186
       },
       __self: _this
     },
@@ -591,7 +676,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       Form,
       { onSubmit: submit, innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 187
         },
         __self: _this
       },
@@ -599,7 +684,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 165
+            lineNumber: 188
           },
           __self: _this
         },
@@ -609,7 +694,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 168
+            lineNumber: 191
           },
           __self: _this
         },
@@ -619,7 +704,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 174
+            lineNumber: 197
           },
           __self: _this
         },
@@ -633,7 +718,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 175
+            lineNumber: 198
           },
           __self: _this
         }),
@@ -641,7 +726,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 182
+              lineNumber: 205
             },
             __self: _this
           },
@@ -652,7 +737,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormResponse,
         { response: response, style: { color: "#8e8e93" }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 187
+            lineNumber: 210
           },
           __self: _this
         },
@@ -664,7 +749,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 215
         },
         __self: _this
       }),
@@ -674,7 +759,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 199
+          lineNumber: 222
         },
         __self: _this
       })
