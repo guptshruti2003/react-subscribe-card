@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.4.1 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.4.2 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -489,7 +489,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
 
   var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
   var submitTiny = function submitTiny() {
-    window.open("https://tinyletter.com/" + tinyletterUsername, "popupwindow", "scrollbars=yes,width=800,height=600");
+    window.open("https://tinyletter.com/" + tinyletterUsername, "_blank", "scrollbars=yes,width=800,height=600");
     return true;
   };
 
