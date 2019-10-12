@@ -127,16 +127,16 @@ var NewsletterForm = function NewsletterForm(_ref3) {
 
   return tinyletterUsername ? React.createElement(
     FormWrapper,
-    {
-      outerCard: outerCard,
-      action: tinyURL,
-      method: "post",
-      target: "popupwindow",
-      onsubmit: submitTiny
-    },
+    { outerCard: outerCard },
     React.createElement(
       Form,
-      { innerCard: innerCard },
+      {
+        innerCard: innerCard,
+        action: tinyURL,
+        method: "post",
+        target: "popupwindow",
+        onSubmit: submitTiny
+      },
       React.createElement(
         FormTitle,
         { title: title },

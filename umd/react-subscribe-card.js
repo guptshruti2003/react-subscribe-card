@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.2.8 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.3.0 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -498,13 +498,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
 
   return tinyletterUsername ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     FormWrapper,
-    {
-      outerCard: outerCard,
-      action: tinyURL,
-      method: "post",
-      target: "popupwindow",
-      onsubmit: submitTiny,
-      __source: {
+    { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
         lineNumber: 123
       },
@@ -512,9 +506,15 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       Form,
-      { innerCard: innerCard, __source: {
+      {
+        innerCard: innerCard,
+        action: tinyURL,
+        method: "post",
+        target: "popupwindow",
+        onSubmit: submitTiny,
+        __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 124
         },
         __self: _this
       },
