@@ -4,7 +4,7 @@
 
 ## Requirements
 
-Requires React and a Mailchimp account!
+Requires React and a Mailchimp or TinyLetter account!
 
 ## Example
 
