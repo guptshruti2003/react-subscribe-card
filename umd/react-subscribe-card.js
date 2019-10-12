@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.2.5 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.2.6 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -498,10 +498,8 @@ var NewsletterForm = function NewsletterForm(_ref3) {
   var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
   var submitTiny = function submitTiny() {
     event.preventDefault();
-    var fieldtogglization = document.getElementsByClassName("fieldtogglization")[0];
     var tinyConfirmation = document.getElementsByClassName("tinyletter-confirmation")[0];
 
-    fieldtogglization.style.display = "none";
     tinyConfirmation.slideDown();
   };
 
@@ -515,7 +513,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       onSubmit: submitTiny,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 130
       },
       __self: _this
     },
@@ -523,7 +521,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       Form,
       { innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 137
         },
         __self: _this
       },
@@ -531,7 +529,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 142
+            lineNumber: 138
           },
           __self: _this
         },
@@ -541,7 +539,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 145
+            lineNumber: 141
           },
           __self: _this
         },
@@ -551,7 +549,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 151
+            lineNumber: 147
           },
           __self: _this
         },
@@ -565,7 +563,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 152
+            lineNumber: 148
           },
           __self: _this
         }),
@@ -573,7 +571,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           TinyConfirmation,
           { className: "tinyletter-confirmation", __source: {
               fileName: _jsxFileName,
-              lineNumber: 159
+              lineNumber: 155
             },
             __self: _this
           },
@@ -581,7 +579,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "hidden", value: "1", name: "embed", __source: {
             fileName: _jsxFileName,
-            lineNumber: 162
+            lineNumber: 158
           },
           __self: _this
         }),
@@ -589,7 +587,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 163
+              lineNumber: 159
             },
             __self: _this
           },
@@ -599,7 +597,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TinyIframe, { name: "tinyletterhider", __source: {
         fileName: _jsxFileName,
-        lineNumber: 168
+        lineNumber: 164
       },
       __self: _this
     })
@@ -607,7 +605,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 171
+        lineNumber: 167
       },
       __self: _this
     },
@@ -615,7 +613,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       Form,
       { onSubmit: submit, innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 168
         },
         __self: _this
       },
@@ -623,7 +621,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 173
+            lineNumber: 169
           },
           __self: _this
         },
@@ -633,7 +631,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 176
+            lineNumber: 172
           },
           __self: _this
         },
@@ -643,7 +641,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 182
+            lineNumber: 178
           },
           __self: _this
         },
@@ -657,7 +655,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 183
+            lineNumber: 179
           },
           __self: _this
         }),
@@ -665,7 +663,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 190
+              lineNumber: 186
             },
             __self: _this
           },
@@ -676,7 +674,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormResponse,
         { response: response, style: { color: "#8e8e93" }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 195
+            lineNumber: 191
           },
           __self: _this
         },
@@ -688,7 +686,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200
+          lineNumber: 196
         },
         __self: _this
       }),
@@ -698,7 +696,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 203
         },
         __self: _this
       })

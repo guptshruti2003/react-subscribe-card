@@ -119,14 +119,10 @@ const NewsletterForm = ({
   const tinyURL = `https://tinyletter.com/${tinyletterUsername}`;
   const submitTiny = () => {
     event.preventDefault();
-    const fieldtogglization = document.getElementsByClassName(
-      "fieldtogglization"
-    )[0];
     const tinyConfirmation = document.getElementsByClassName(
       "tinyletter-confirmation"
     )[0];
 
-    fieldtogglization.style.display = "none";
     tinyConfirmation.slideDown();
   };
 
