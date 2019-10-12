@@ -123,7 +123,10 @@ var NewsletterForm = function NewsletterForm(_ref3) {
   };
 
   var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
-  var submitTiny = "window.open('https://tinyletter.com/" + tinyletterUsername + "', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true";
+  var submitTiny = function submitTiny() {
+    window.open("https://tinyletter.com/${tinyletterUsername}", "popupwindow", "scrollbars=yes,width=800,height=600");
+    return true;
+  };
 
   return tinyletterUsername ? React.createElement(
     FormWrapper,
@@ -151,9 +154,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer },
         React.createElement(FormInput, {
-          ref: function ref(node) {
-            return email = node;
-          },
+          id: "tlemail",
           type: "email",
           placeholder: "Your email",
           "aria-label": "email",
@@ -162,7 +163,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         React.createElement("input", { type: "hidden", value: "1", name: "embed" }),
         React.createElement(
           FormButton,
-          { type: "submit", subButton: subButton },
+          { type: "submit", value: "Subscribe", subButton: subButton },
           buttonText ? buttonText : "Subscribe"
         )
       )

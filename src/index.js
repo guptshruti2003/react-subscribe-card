@@ -133,7 +133,7 @@ const NewsletterForm = ({
         action={tinyURL}
         method="post"
         target="popupwindow"
-        onsubmit={submitTiny}
+        onSubmit={submitTiny}
       >
         <FormTitle title={title}>
           {titleText ? titleText : `Join my newsletter`}
