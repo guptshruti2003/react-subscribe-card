@@ -117,7 +117,14 @@ const NewsletterForm = ({
   };
 
   const tinyURL = `https://tinyletter.com/${tinyletterUsername}`;
-  const submitTiny = `window.open('https://tinyletter.com/${tinyletterUsername}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true`;
+  const submitTiny = () => {
+    window.open(
+      "https://tinyletter.com/${tinyletterUsername}",
+      "popupwindow",
+      "scrollbars=yes,width=800,height=600"
+    );
+    return true;
+  };
 
   return tinyletterUsername ? (
     <FormWrapper outerCard={outerCard}>
@@ -126,7 +133,7 @@ const NewsletterForm = ({
         action={tinyURL}
         method="post"
         target="popupwindow"
-        onSubmit={submitTiny}
+        onsubmit={submitTiny}
       >
         <FormTitle title={title}>
           {titleText ? titleText : `Join my newsletter`}
@@ -139,14 +146,14 @@ const NewsletterForm = ({
         </FormDescription>
         <SubContainer subContainer={subContainer}>
           <FormInput
-            ref={node => (email = node)}
+            id="tlemail"
             type="email"
             placeholder="Your email"
             aria-label="email"
             subInput={subInput}
           />
           <input type="hidden" value="1" name="embed" />
-          <FormButton type="submit" subButton={subButton}>
+          <FormButton type="submit" value="Subscribe" subButton={subButton}>
             {buttonText ? buttonText : `Subscribe`}
           </FormButton>
         </SubContainer>
