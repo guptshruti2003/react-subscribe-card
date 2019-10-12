@@ -44,9 +44,6 @@ const SubscribeCard = ({
   ) : tinyletterUsername ? (
     <NewsletterForm
       tinyletterUsername={tinyletterUsername}
-      status={status}
-      message={message}
-      onValidated={formData => subscribe(formData)}
       outerCard={outerCardStyle}
       innerCard={innerCardStyle}
       title={titleStyle}

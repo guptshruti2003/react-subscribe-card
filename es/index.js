@@ -59,11 +59,6 @@ var SubscribeCard = function SubscribeCard(_ref) {
     }
   }) : tinyletterUsername ? React.createElement(NewsletterForm, {
     tinyletterUsername: tinyletterUsername,
-    status: status,
-    message: message,
-    onValidated: function onValidated(formData) {
-      return subscribe(formData);
-    },
     outerCard: outerCardStyle,
     innerCard: innerCardStyle,
     title: titleStyle,
