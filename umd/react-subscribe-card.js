@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.4.0 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.4.1 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -507,7 +507,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         innerCard: innerCard,
         action: tinyURL,
         method: "post",
-        target: "_blank",
+        target: "popupwindow",
         onSubmit: submitTiny,
         __source: {
           fileName: _jsxFileName,

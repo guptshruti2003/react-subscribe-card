@@ -131,7 +131,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         innerCard: innerCard,
         action: tinyURL,
         method: "post",
-        target: "_blank",
+        target: "popupwindow",
         onSubmit: submitTiny
       },
       React.createElement(
