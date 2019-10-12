@@ -67,8 +67,29 @@ import GradientButton from 'react-native-gradient-buttons';
 
 ## Props
 
-- `subURL`: `String`
+- `mailchimpURL`: `String`
+
   - To get your Mailchimp subscription URL, go to Mailchimp Form Builder > select Embedded forms > look at embedded HTML and copy the `action` URL in the `<form>`.
+
+- `tinyletterUsername`: `String`
+  - To use TinyLetter, use your username (`http://tinyletter.com/your-username`)
+
+_Note: Only use `mailchimpURL` or `tinyletterUsername` prop. If you use both, `mailchimpURL` will take precedent._
+
+- `title`: `String`
+
+  - Title of your card
+  - default: "Join my newsletter"
+
+- `description`: `String`
+
+  - Description of your card
+  - default: "Subscribe and I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on."
+
+- `buttonText`: `String`
+
+  - Text of the submit button
+  - default: "Subscribe"
 
 #### The following props are strings, but you must format as CSS to override the default styles
 

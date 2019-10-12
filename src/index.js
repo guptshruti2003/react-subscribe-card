@@ -1,39 +1,74 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 const SubscribeCard = ({
-  subURL,
+  mailchimpURL,
+  tinyletterUsername,
   outerCardStyle,
   innerCardStyle,
+  title,
   titleStyle,
+  description,
   descriptionStyle,
   subContainerStyle,
   subInputStyle,
+  buttonText,
   subButtonStyle,
   responseStyle
-}) => (
-  <MailchimpSubscribe
-    url={subURL}
-    render={({ subscribe, status, message }) => (
-      <NewsletterForm
-        status={status}
-        message={message}
-        onValidated={formData => subscribe(formData)}
-        outerCard={outerCardStyle}
-        innerCard={innerCardStyle}
-        title={titleStyle}
-        description={descriptionStyle}
-        subContainer={subContainerStyle}
-        subInput={subInputStyle}
-        subButton={subButtonStyle}
-        response={responseStyle}
-      />
-    )}
-  />
-)
+}) => {
+  return mailchimpURL ? (
+    <MailchimpSubscribe
+      url={mailchimpURL}
+      render={({ subscribe, status, message }) => (
+        <NewsletterForm
+          status={status}
+          message={message}
+          onValidated={formData => subscribe(formData)}
+          outerCard={outerCardStyle}
+          innerCard={innerCardStyle}
+          title={titleStyle}
+          titleText={title}
+          description={descriptionStyle}
+          descriptionText={description}
+          subContainer={subContainerStyle}
+          subInput={subInputStyle}
+          subButton={subButtonStyle}
+          buttonText={buttonText}
+          response={responseStyle}
+        />
+      )}
+    />
+  ) : tinyletterUsername ? (
+    <NewsletterForm
+      tinyletterUsername={tinyletterUsername}
+      status={status}
+      message={message}
+      onValidated={formData => subscribe(formData)}
+      outerCard={outerCardStyle}
+      innerCard={innerCardStyle}
+      title={titleStyle}
+      description={descriptionStyle}
+      subContainer={subContainerStyle}
+      subInput={subInputStyle}
+      subButton={subButtonStyle}
+      response={responseStyle}
+    />
+  ) : (
+    <NewsletterForm
+      outerCard={outerCardStyle}
+      innerCard={innerCardStyle}
+      title={titleStyle}
+      description={descriptionStyle}
+      subContainer={subContainerStyle}
+      subInput={subInputStyle}
+      subButton={subButtonStyle}
+      response={responseStyle}
+    />
+  );
+};
 
 SubscribeCard.propTypes = {
   subURL: PropTypes.string,
@@ -45,78 +80,142 @@ SubscribeCard.propTypes = {
   subInputStyle: PropTypes.string,
   subButtonStyle: PropTypes.string,
   responseStyle: PropTypes.string
+};
+
+export default SubscribeCard;
+
+function slideDown(elem) {
+  elem.style.maxHeight = "1000px";
+  // We're using a timer to set opacity = 0 because setting max-height = 0 doesn't (completely) hide the element.
+  elem.style.opacity = "1";
 }
 
-export default SubscribeCard
-
 const NewsletterForm = ({
+  tinyletterUsername,
   status,
   message,
   onValidated,
   outerCard,
   innerCard,
   title,
+  titleText,
   description,
+  descriptionText,
   subContainer,
   subInput,
   subButton,
+  buttonText,
   response
 }) => {
-  let email
+  let email;
   const submit = event => {
-    event.preventDefault()
+    event.preventDefault();
     return (
       email &&
-      email.value.indexOf('@') > -1 &&
+      email.value.indexOf("@") > -1 &&
       onValidated({
         EMAIL: email.value
       })
-    )
-  }
+    );
+  };
 
-  return (
-    <FormWrapper outerCard={outerCard}>
-      <Form onSubmit={submit} innerCard={innerCard}>
-        <FormTitle title={title}>Join my newsletter</FormTitle>
+  const tinyURL = `https://tinyletter.com/${tinyletterUsername}`;
+  const submitTiny = () => {
+    const fieldtogglization = document.getElementsByClassName(
+      "fieldtogglization"
+    )[0];
+    const tinyConfirmation = document.getElementsByClassName(
+      "tinyletter-confirmation"
+    )[0];
+
+    fieldtogglization.style.display = "none";
+    tinyConfirmation.slideDown();
+  };
+
+  return tinyletterUsername ? (
+    <FormWrapper
+      outerCard={outerCard}
+      action={tinyURL}
+      method="post"
+      target="tinyletterhider"
+      onSubmit={submitTiny}
+    >
+      <Form innerCard={innerCard}>
+        <FormTitle title={title}>
+          {titleText ? titleText : `Join my newsletter`}
+        </FormTitle>
         <FormDescription description={description}>
-          Subscribe and I'll send you my latest blog posts by email. Also,
-          you'll be the first to hear about new things I'm working on.
+          {descriptionText
+            ? descriptionText
+            : `Subscribe and I'll send you my latest blog posts by email. Also,
+          you'll be the first to hear about new things I'm working on.`}
         </FormDescription>
         <SubContainer subContainer={subContainer}>
           <FormInput
             ref={node => (email = node)}
-            type='email'
-            placeholder='Your email'
-            aria-label='email'
+            type="email"
+            placeholder="Your email"
+            aria-label="email"
             subInput={subInput}
           />
-          <FormButton type='submit' subButton={subButton}>
-            Subscribe
+          <TinyConfirmation>
+            You're almost done! Check your email to confirm subscription.
+          </TinyConfirmation>
+          <input type="hidden" value="1" name="embed" />
+          <FormButton type="submit" subButton={subButton}>
+            {buttonText ? buttonText : `Subscribe`}
           </FormButton>
         </SubContainer>
-        {status === 'sending' && (
-          <FormResponse response={response} style={{ color: '#8e8e93' }}>
+      </Form>
+      <TinyIframe name="tinyletterhider"></TinyIframe>
+    </FormWrapper>
+  ) : (
+    <FormWrapper outerCard={outerCard}>
+      <Form onSubmit={submit} innerCard={innerCard}>
+        <FormTitle title={title}>
+          {titleText ? titleText : `Join my newsletter`}
+        </FormTitle>
+        <FormDescription description={description}>
+          {descriptionText
+            ? descriptionText
+            : `Subscribe and I'll send you my latest blog posts by email. Also,
+          you'll be the first to hear about new things I'm working on.`}
+        </FormDescription>
+        <SubContainer subContainer={subContainer}>
+          <FormInput
+            ref={node => (email = node)}
+            type="email"
+            placeholder="Your email"
+            aria-label="email"
+            subInput={subInput}
+          />
+          <FormButton type="submit" subButton={subButton}>
+            {buttonText ? buttonText : `Subscribe`}
+          </FormButton>
+        </SubContainer>
+        {status === "sending" && (
+          <FormResponse response={response} style={{ color: "#8e8e93" }}>
             sending...
           </FormResponse>
         )}
-        {status === 'error' && (
+        {status === "error" && (
           <FormResponse
             response={response}
-            style={{ color: '#ff2d55' }}
+            style={{ color: "#ff2d55" }}
             dangerouslySetInnerHTML={{ __html: message }}
           />
         )}
-        {status === 'success' && (
+        {status === "success" && (
           <FormResponse
             response={response}
-            style={{ color: '#4cd964' }}
+            style={{ color: "#4cd964" }}
             dangerouslySetInnerHTML={{ __html: message }}
           />
         )}
       </Form>
     </FormWrapper>
-  )
-}
+  );
+};
 
 NewsletterForm.propTypes = {
   status: PropTypes.string,
@@ -130,7 +229,7 @@ NewsletterForm.propTypes = {
   subInput: PropTypes.string,
   subButton: PropTypes.string,
   response: PropTypes.string
-}
+};
 
 const FormWrapper = styled.div`
   box-sizing: border-box;
@@ -143,7 +242,7 @@ const FormWrapper = styled.div`
   width: 550px;
 
   ${props => props.outerCard && props.outerCard}
-`
+`;
 
 const Form = styled.form`
   background-color: #fdfdfd;
@@ -152,10 +251,10 @@ const Form = styled.form`
   margin: 0;
 
   ${props => props.outerCard && props.innerCard}
-`
+`;
 
 const FormTitle = styled.h3`
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: 800;
   margin: 0 0 10px 0;
@@ -163,10 +262,10 @@ const FormTitle = styled.h3`
   word-break: break-word;
 
   ${props => props.title && props.title}
-`
+`;
 
 const FormDescription = styled.p`
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 21px;
@@ -174,7 +273,7 @@ const FormDescription = styled.p`
   text-align: left;
 
   ${props => props.description && props.description}
-`
+`;
 
 const SubContainer = styled.div`
   display: flex;
@@ -184,10 +283,10 @@ const SubContainer = styled.div`
   }
 
   ${props => props.subContainer && props.subContainer}
-`
+`;
 
 const FormInput = styled.input`
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   background-color: #fdfdfd;
   color: #333333;
   border-color: #f2f2f2;
@@ -209,10 +308,10 @@ const FormInput = styled.input`
   }
 
   ${props => props.subInput && props.subInput}
-`
+`;
 
 const FormButton = styled.button`
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   background-color: #000000;
   border: none;
   border-radius: 25px;
@@ -232,10 +331,10 @@ const FormButton = styled.button`
   }
 
   ${props => props.subButton && props.subButton}
-`
+`;
 
 const FormResponse = styled.p`
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 21px;
@@ -244,4 +343,25 @@ const FormResponse = styled.p`
   margin-top: 4px;
 
   ${props => props.response && props.response}
-`
+`;
+
+const TinyConfirmation = styled.span`
+  display: none;
+  float: left;
+  margin: 20px 0;
+  background: green;
+  padding: 20px;
+  color: white;
+  text-shadow: 1px 0 0 black;
+  border-radius: 2px;
+`;
+
+const TinyIframe = styled.iframe`
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  left: -99999em;
+  visibility: hidden;
+  top: 0;
+`;

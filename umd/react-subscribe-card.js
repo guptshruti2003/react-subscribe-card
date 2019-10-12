@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.1.3 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.2.0 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -346,17 +346,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_mailchimp_subscribe__ = __webpack_require__(21);
-var _jsxFileName = '/Users/thomaswang/Desktop/Open Source/react-subscribe-card/src/index.js',
+var _jsxFileName = "/Users/thomaswang/Desktop/Open Source/react-subscribe-card/src/index.js",
     _this = this;
 
-var _templateObject = _taggedTemplateLiteralLoose(['\n  box-sizing: border-box;\n  position: relative;\n  background-color: #f2f2f2;\n  border-radius: 8px;\n  padding: 8px;\n  margin: 48px auto;\n  max-width: 90%;\n  width: 550px;\n\n  ', '\n'], ['\n  box-sizing: border-box;\n  position: relative;\n  background-color: #f2f2f2;\n  border-radius: 8px;\n  padding: 8px;\n  margin: 48px auto;\n  max-width: 90%;\n  width: 550px;\n\n  ', '\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  background-color: #fdfdfd;\n  border-radius: 4px;\n  padding: 20px;\n  margin: 0;\n\n  ', '\n'], ['\n  background-color: #fdfdfd;\n  border-radius: 4px;\n  padding: 20px;\n  margin: 0;\n\n  ', '\n']),
-    _templateObject3 = _taggedTemplateLiteralLoose(['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  font-size: 30px;\n  font-weight: 800;\n  margin: 0 0 10px 0;\n  text-align: left;\n  word-break: break-word;\n\n  ', '\n'], ['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  font-size: 30px;\n  font-weight: 800;\n  margin: 0 0 10px 0;\n  text-align: left;\n  word-break: break-word;\n\n  ', '\n']),
-    _templateObject4 = _taggedTemplateLiteralLoose(['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 400;\n  line-height: 21px;\n  margin: 0 0 10px 0;\n  text-align: left;\n\n  ', '\n'], ['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 400;\n  line-height: 21px;\n  margin: 0 0 10px 0;\n  text-align: left;\n\n  ', '\n']),
-    _templateObject5 = _taggedTemplateLiteralLoose(['\n  display: flex;\n\n  @media all and (max-width: 500px) {\n    flex-direction: column;\n  }\n\n  ', '\n'], ['\n  display: flex;\n\n  @media all and (max-width: 500px) {\n    flex-direction: column;\n  }\n\n  ', '\n']),
-    _templateObject6 = _taggedTemplateLiteralLoose(['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  background-color: #fdfdfd;\n  color: #333333;\n  border-color: #f2f2f2;\n  border-style: solid;\n  border-width: 5px;\n  font-size: 16px;\n  height: 40px;\n  line-height: 20px;\n  margin-bottom: 10px;\n  margin-top: 0;\n  padding: 10px 10px;\n  box-sizing: border-box;\n  width: 70%;\n  max-width: 100%;\n  margin-right: 16px;\n\n  @media all and (max-width: 500px) {\n    width: 100%;\n  }\n\n  ', '\n'], ['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  background-color: #fdfdfd;\n  color: #333333;\n  border-color: #f2f2f2;\n  border-style: solid;\n  border-width: 5px;\n  font-size: 16px;\n  height: 40px;\n  line-height: 20px;\n  margin-bottom: 10px;\n  margin-top: 0;\n  padding: 10px 10px;\n  box-sizing: border-box;\n  width: 70%;\n  max-width: 100%;\n  margin-right: 16px;\n\n  @media all and (max-width: 500px) {\n    width: 100%;\n  }\n\n  ', '\n']),
-    _templateObject7 = _taggedTemplateLiteralLoose(['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  background-color: #000000;\n  border: none;\n  border-radius: 25px;\n  box-shadow: none;\n  color: #ffffff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 40px;\n  line-height: 20px;\n  padding: 10px 20px;\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n\n  &:hover {\n    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);\n  }\n\n  ', '\n'], ['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  background-color: #000000;\n  border: none;\n  border-radius: 25px;\n  box-shadow: none;\n  color: #ffffff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 40px;\n  line-height: 20px;\n  padding: 10px 20px;\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n\n  &:hover {\n    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);\n  }\n\n  ', '\n']),
-    _templateObject8 = _taggedTemplateLiteralLoose(['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ', '\n'], ['\n  font-family: \'Montserrat\', Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ', '\n']);
+var _templateObject = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  position: relative;\n  background-color: #f2f2f2;\n  border-radius: 8px;\n  padding: 8px;\n  margin: 48px auto;\n  max-width: 90%;\n  width: 550px;\n\n  ", "\n"], ["\n  box-sizing: border-box;\n  position: relative;\n  background-color: #f2f2f2;\n  border-radius: 8px;\n  padding: 8px;\n  margin: 48px auto;\n  max-width: 90%;\n  width: 550px;\n\n  ", "\n"]),
+    _templateObject2 = _taggedTemplateLiteralLoose(["\n  background-color: #fdfdfd;\n  border-radius: 4px;\n  padding: 20px;\n  margin: 0;\n\n  ", "\n"], ["\n  background-color: #fdfdfd;\n  border-radius: 4px;\n  padding: 20px;\n  margin: 0;\n\n  ", "\n"]),
+    _templateObject3 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 30px;\n  font-weight: 800;\n  margin: 0 0 10px 0;\n  text-align: left;\n  word-break: break-word;\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 30px;\n  font-weight: 800;\n  margin: 0 0 10px 0;\n  text-align: left;\n  word-break: break-word;\n\n  ", "\n"]),
+    _templateObject4 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 400;\n  line-height: 21px;\n  margin: 0 0 10px 0;\n  text-align: left;\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 400;\n  line-height: 21px;\n  margin: 0 0 10px 0;\n  text-align: left;\n\n  ", "\n"]),
+    _templateObject5 = _taggedTemplateLiteralLoose(["\n  display: flex;\n\n  @media all and (max-width: 500px) {\n    flex-direction: column;\n  }\n\n  ", "\n"], ["\n  display: flex;\n\n  @media all and (max-width: 500px) {\n    flex-direction: column;\n  }\n\n  ", "\n"]),
+    _templateObject6 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #fdfdfd;\n  color: #333333;\n  border-color: #f2f2f2;\n  border-style: solid;\n  border-width: 5px;\n  font-size: 16px;\n  height: 40px;\n  line-height: 20px;\n  margin-bottom: 10px;\n  margin-top: 0;\n  padding: 10px 10px;\n  box-sizing: border-box;\n  width: 70%;\n  max-width: 100%;\n  margin-right: 16px;\n\n  @media all and (max-width: 500px) {\n    width: 100%;\n  }\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #fdfdfd;\n  color: #333333;\n  border-color: #f2f2f2;\n  border-style: solid;\n  border-width: 5px;\n  font-size: 16px;\n  height: 40px;\n  line-height: 20px;\n  margin-bottom: 10px;\n  margin-top: 0;\n  padding: 10px 10px;\n  box-sizing: border-box;\n  width: 70%;\n  max-width: 100%;\n  margin-right: 16px;\n\n  @media all and (max-width: 500px) {\n    width: 100%;\n  }\n\n  ", "\n"]),
+    _templateObject7 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #000000;\n  border: none;\n  border-radius: 25px;\n  box-shadow: none;\n  color: #ffffff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 40px;\n  line-height: 20px;\n  padding: 10px 20px;\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n\n  &:hover {\n    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);\n  }\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #000000;\n  border: none;\n  border-radius: 25px;\n  box-shadow: none;\n  color: #ffffff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 40px;\n  line-height: 20px;\n  padding: 10px 20px;\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n\n  &:hover {\n    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);\n  }\n\n  ", "\n"]),
+    _templateObject8 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ", "\n"]),
+    _templateObject9 = _taggedTemplateLiteralLoose(["\n  display: none;\n  float: left;\n  margin: 20px 0;\n  background: green;\n  padding: 20px;\n  color: white;\n  text-shadow: 1px 0 0 black;\n  border-radius: 2px;\n"], ["\n  display: none;\n  float: left;\n  margin: 20px 0;\n  background: green;\n  padding: 20px;\n  color: white;\n  text-shadow: 1px 0 0 black;\n  border-radius: 2px;\n"]),
+    _templateObject10 = _taggedTemplateLiteralLoose(["\n  width: 1px;\n  height: 1px;\n  overflow: hidden;\n  position: absolute;\n  left: -99999em;\n  visibility: hidden;\n  top: 0;\n"], ["\n  width: 1px;\n  height: 1px;\n  overflow: hidden;\n  position: absolute;\n  left: -99999em;\n  visibility: hidden;\n  top: 0;\n"]);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
@@ -367,17 +369,22 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 var SubscribeCard = function SubscribeCard(_ref) {
-  var subURL = _ref.subURL,
+  var mailchimpURL = _ref.mailchimpURL,
+      tinyletterUsername = _ref.tinyletterUsername,
       outerCardStyle = _ref.outerCardStyle,
       innerCardStyle = _ref.innerCardStyle,
+      title = _ref.title,
       titleStyle = _ref.titleStyle,
+      description = _ref.description,
       descriptionStyle = _ref.descriptionStyle,
       subContainerStyle = _ref.subContainerStyle,
       subInputStyle = _ref.subInputStyle,
+      buttonText = _ref.buttonText,
       subButtonStyle = _ref.subButtonStyle,
       responseStyle = _ref.responseStyle;
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_mailchimp_subscribe__["a" /* default */], {
-    url: subURL,
+
+  return mailchimpURL ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_mailchimp_subscribe__["a" /* default */], {
+    url: mailchimpURL,
     render: function render(_ref2) {
       var subscribe = _ref2.subscribe,
           status = _ref2.status,
@@ -391,21 +398,58 @@ var SubscribeCard = function SubscribeCard(_ref) {
         outerCard: outerCardStyle,
         innerCard: innerCardStyle,
         title: titleStyle,
+        titleText: title,
         description: descriptionStyle,
+        descriptionText: description,
         subContainer: subContainerStyle,
         subInput: subInputStyle,
         subButton: subButtonStyle,
+        buttonText: buttonText,
         response: responseStyle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 26
         },
         __self: _this
       });
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 23
+    },
+    __self: _this
+  }) : tinyletterUsername ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(NewsletterForm, {
+    tinyletterUsername: tinyletterUsername,
+    status: status,
+    message: message,
+    onValidated: function onValidated(formData) {
+      return subscribe(formData);
+    },
+    outerCard: outerCardStyle,
+    innerCard: innerCardStyle,
+    title: titleStyle,
+    description: descriptionStyle,
+    subContainer: subContainerStyle,
+    subInput: subInputStyle,
+    subButton: subButtonStyle,
+    response: responseStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: _this
+  }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(NewsletterForm, {
+    outerCard: outerCardStyle,
+    innerCard: innerCardStyle,
+    title: titleStyle,
+    description: descriptionStyle,
+    subContainer: subContainerStyle,
+    subInput: subInputStyle,
+    subButton: subButtonStyle,
+    response: responseStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
     },
     __self: _this
   });
@@ -425,40 +469,65 @@ SubscribeCard.propTypes = {
 
 /* harmony default export */ __webpack_exports__["default"] = (SubscribeCard);
 
+function slideDown(elem) {
+  elem.style.maxHeight = "1000px";
+  // We're using a timer to set opacity = 0 because setting max-height = 0 doesn't (completely) hide the element.
+  elem.style.opacity = "1";
+}
+
 var NewsletterForm = function NewsletterForm(_ref3) {
-  var status = _ref3.status,
+  var tinyletterUsername = _ref3.tinyletterUsername,
+      status = _ref3.status,
       message = _ref3.message,
       onValidated = _ref3.onValidated,
       outerCard = _ref3.outerCard,
       innerCard = _ref3.innerCard,
       title = _ref3.title,
+      titleText = _ref3.titleText,
       description = _ref3.description,
+      descriptionText = _ref3.descriptionText,
       subContainer = _ref3.subContainer,
       subInput = _ref3.subInput,
       subButton = _ref3.subButton,
+      buttonText = _ref3.buttonText,
       response = _ref3.response;
 
   var email = void 0;
   var submit = function submit(event) {
     event.preventDefault();
-    return email && email.value.indexOf('@') > -1 && onValidated({
+    return email && email.value.indexOf("@") > -1 && onValidated({
       EMAIL: email.value
     });
   };
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
+  var submitTiny = function submitTiny() {
+    var fieldtogglization = document.getElementsByClassName("fieldtogglization")[0];
+    var tinyConfirmation = document.getElementsByClassName("tinyletter-confirmation")[0];
+
+    fieldtogglization.style.display = "none";
+    tinyConfirmation.slideDown();
+  };
+
+  return tinyletterUsername ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     FormWrapper,
-    { outerCard: outerCard, __source: {
+    {
+      outerCard: outerCard,
+      action: tinyURL,
+      method: "post",
+      target: "tinyletterhider",
+      onSubmit: submitTiny,
+      __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 136
       },
       __self: _this
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       Form,
-      { onSubmit: submit, innerCard: innerCard, __source: {
+      { innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 143
         },
         __self: _this
       },
@@ -466,27 +535,27 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 144
           },
           __self: _this
         },
-        'Join my newsletter'
+        titleText ? titleText : "Join my newsletter"
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 147
           },
           __self: _this
         },
-        'Subscribe and I\'ll send you my latest blog posts by email. Also, you\'ll be the first to hear about new things I\'m working on.'
+        descriptionText ? descriptionText : "Subscribe and I'll send you my latest blog posts by email. Also,\n          you'll be the first to hear about new things I'm working on."
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 153
           },
           __self: _this
         },
@@ -494,54 +563,147 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           ref: function ref(node) {
             return email = node;
           },
-          type: 'email',
-          placeholder: 'Your email',
-          'aria-label': 'email',
+          type: "email",
+          placeholder: "Your email",
+          "aria-label": "email",
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 86
+            lineNumber: 154
+          },
+          __self: _this
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          TinyConfirmation,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 161
+            },
+            __self: _this
+          },
+          "You're almost done! Check your email to confirm subscription."
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "hidden", value: "1", name: "embed", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 164
           },
           __self: _this
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           FormButton,
-          { type: 'submit', subButton: subButton, __source: {
+          { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 93
+              lineNumber: 165
             },
             __self: _this
           },
-          'Subscribe'
+          buttonText ? buttonText : "Subscribe"
         )
-      ),
-      status === 'sending' && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        FormResponse,
-        { response: response, style: { color: '#8e8e93' }, __source: {
+      )
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TinyIframe, { name: "tinyletterhider", __source: {
+        fileName: _jsxFileName,
+        lineNumber: 170
+      },
+      __self: _this
+    })
+  ) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    FormWrapper,
+    { outerCard: outerCard, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 173
+      },
+      __self: _this
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Form,
+      { onSubmit: submit, innerCard: innerCard, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 174
+        },
+        __self: _this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        FormTitle,
+        { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 98
+            lineNumber: 175
           },
           __self: _this
         },
-        'sending...'
+        titleText ? titleText : "Join my newsletter"
       ),
-      status === 'error' && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FormResponse, {
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        FormDescription,
+        { description: description, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 178
+          },
+          __self: _this
+        },
+        descriptionText ? descriptionText : "Subscribe and I'll send you my latest blog posts by email. Also,\n          you'll be the first to hear about new things I'm working on."
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        SubContainer,
+        { subContainer: subContainer, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 184
+          },
+          __self: _this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FormInput, {
+          ref: function ref(node) {
+            return email = node;
+          },
+          type: "email",
+          placeholder: "Your email",
+          "aria-label": "email",
+          subInput: subInput,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 185
+          },
+          __self: _this
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          FormButton,
+          { type: "submit", subButton: subButton, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 192
+            },
+            __self: _this
+          },
+          buttonText ? buttonText : "Subscribe"
+        )
+      ),
+      status === "sending" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        FormResponse,
+        { response: response, style: { color: "#8e8e93" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 197
+          },
+          __self: _this
+        },
+        "sending..."
+      ),
+      status === "error" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FormResponse, {
         response: response,
-        style: { color: '#ff2d55' },
+        style: { color: "#ff2d55" },
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 202
         },
         __self: _this
       }),
-      status === 'success' && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FormResponse, {
+      status === "success" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FormResponse, {
         response: response,
-        style: { color: '#4cd964' },
+        style: { color: "#4cd964" },
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 209
         },
         __self: _this
       })
@@ -594,6 +756,10 @@ var FormButton = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default 
 var FormResponse = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].p(_templateObject8, function (props) {
   return props.response && props.response;
 });
+
+var TinyConfirmation = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].span(_templateObject9);
+
+var TinyIframe = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].iframe(_templateObject10);
 
 /***/ }),
 /* 6 */
