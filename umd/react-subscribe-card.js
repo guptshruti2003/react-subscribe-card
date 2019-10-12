@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.2.6 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.2.7 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -500,7 +500,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     event.preventDefault();
     var tinyConfirmation = document.getElementsByClassName("tinyletter-confirmation")[0];
 
-    tinyConfirmation.slideDown();
+    slideDown(tinyConfirmation);
   };
 
   return tinyletterUsername ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

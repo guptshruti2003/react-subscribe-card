@@ -123,7 +123,7 @@ const NewsletterForm = ({
       "tinyletter-confirmation"
     )[0];
 
-    tinyConfirmation.slideDown();
+    slideDown(tinyConfirmation);
   };
 
   return tinyletterUsername ? (

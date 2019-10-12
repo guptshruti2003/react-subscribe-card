@@ -129,7 +129,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     event.preventDefault();
     var tinyConfirmation = document.getElementsByClassName("tinyletter-confirmation")[0];
 
-    tinyConfirmation.slideDown();
+    slideDown(tinyConfirmation);
   };
 
   return tinyletterUsername ? React.createElement(
