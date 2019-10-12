@@ -126,6 +126,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
 
   var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
   var submitTiny = function submitTiny() {
+    event.preventDefault();
     var fieldtogglization = document.getElementsByClassName("fieldtogglization")[0];
     var tinyConfirmation = document.getElementsByClassName("tinyletter-confirmation")[0];
 

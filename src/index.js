@@ -118,6 +118,7 @@ const NewsletterForm = ({
 
   const tinyURL = `https://tinyletter.com/${tinyletterUsername}`;
   const submitTiny = () => {
+    event.preventDefault();
     const fieldtogglization = document.getElementsByClassName(
       "fieldtogglization"
     )[0];
