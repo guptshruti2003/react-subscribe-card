@@ -120,14 +120,14 @@ const NewsletterForm = ({
   const submitTiny = `window.open('https://tinyletter.com/${tinyletterUsername}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true`;
 
   return tinyletterUsername ? (
-    <FormWrapper
-      outerCard={outerCard}
-      action={tinyURL}
-      method="post"
-      target="popupwindow"
-      onsubmit={submitTiny}
-    >
-      <Form innerCard={innerCard}>
+    <FormWrapper outerCard={outerCard}>
+      <Form
+        innerCard={innerCard}
+        action={tinyURL}
+        method="post"
+        target="popupwindow"
+        onSubmit={submitTiny}
+      >
         <FormTitle title={title}>
           {titleText ? titleText : `Join my newsletter`}
         </FormTitle>
