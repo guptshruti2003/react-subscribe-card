@@ -81,12 +81,6 @@ SubscribeCard.propTypes = {
 
 export default SubscribeCard;
 
-function slideDown(elem) {
-  elem.style.maxHeight = "1000px";
-  // We're using a timer to set opacity = 0 because setting max-height = 0 doesn't (completely) hide the element.
-  elem.style.opacity = "1";
-}
-
 const NewsletterForm = ({
   tinyletterUsername,
   status,
@@ -126,35 +120,13 @@ const NewsletterForm = ({
     return true;
   };
 
-  <form
-    style="border:1px solid #ccc;padding:3px;text-align:center;"
-    action="https://tinyletter.com/thomaswang"
-    method="post"
-    target="_blank"
-    onsubmit="window.open('https://tinyletter.com/thomaswang', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
-  >
-    <p>
-      <label for="tlemail">Enter your email address</label>
-    </p>
-    <p>
-      <input type="text" style="width:140px" name="email" id="tlemail" />
-    </p>
-    <input type="hidden" value="1" name="embed" />
-    <input type="submit" value="Subscribe" />
-    <p>
-      <a href="https://tinyletter.com" target="_blank">
-        powered by TinyLetter
-      </a>
-    </p>
-  </form>;
-
   return tinyletterUsername ? (
     <FormWrapper outerCard={outerCard}>
       <Form
         innerCard={innerCard}
         action={tinyURL}
         method="post"
-        target="popupwindow"
+        target="_blank"
         onSubmit={submitTiny}
       >
         <FormTitle title={title}>
