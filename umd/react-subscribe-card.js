@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.2.7 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.2.8 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -356,9 +356,7 @@ var _templateObject = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\
     _templateObject5 = _taggedTemplateLiteralLoose(["\n  display: flex;\n\n  @media all and (max-width: 500px) {\n    flex-direction: column;\n  }\n\n  ", "\n"], ["\n  display: flex;\n\n  @media all and (max-width: 500px) {\n    flex-direction: column;\n  }\n\n  ", "\n"]),
     _templateObject6 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #fdfdfd;\n  color: #333333;\n  border-color: #f2f2f2;\n  border-style: solid;\n  border-width: 5px;\n  font-size: 16px;\n  height: 40px;\n  line-height: 20px;\n  margin-bottom: 10px;\n  margin-top: 0;\n  padding: 10px 10px;\n  box-sizing: border-box;\n  width: 70%;\n  max-width: 100%;\n  margin-right: 16px;\n\n  @media all and (max-width: 500px) {\n    width: 100%;\n  }\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #fdfdfd;\n  color: #333333;\n  border-color: #f2f2f2;\n  border-style: solid;\n  border-width: 5px;\n  font-size: 16px;\n  height: 40px;\n  line-height: 20px;\n  margin-bottom: 10px;\n  margin-top: 0;\n  padding: 10px 10px;\n  box-sizing: border-box;\n  width: 70%;\n  max-width: 100%;\n  margin-right: 16px;\n\n  @media all and (max-width: 500px) {\n    width: 100%;\n  }\n\n  ", "\n"]),
     _templateObject7 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #000000;\n  border: none;\n  border-radius: 25px;\n  box-shadow: none;\n  color: #ffffff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 40px;\n  line-height: 20px;\n  padding: 10px 20px;\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n\n  &:hover {\n    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);\n  }\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  background-color: #000000;\n  border: none;\n  border-radius: 25px;\n  box-shadow: none;\n  color: #ffffff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 40px;\n  line-height: 20px;\n  padding: 10px 20px;\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n\n  &:hover {\n    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);\n  }\n\n  ", "\n"]),
-    _templateObject8 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ", "\n"]),
-    _templateObject9 = _taggedTemplateLiteralLoose(["\n  display: none;\n  float: left;\n  margin: 20px 0;\n  background: green;\n  padding: 20px;\n  color: white;\n  text-shadow: 1px 0 0 black;\n  border-radius: 2px;\n"], ["\n  display: none;\n  float: left;\n  margin: 20px 0;\n  background: green;\n  padding: 20px;\n  color: white;\n  text-shadow: 1px 0 0 black;\n  border-radius: 2px;\n"]),
-    _templateObject10 = _taggedTemplateLiteralLoose(["\n  width: 1px;\n  height: 1px;\n  overflow: hidden;\n  position: absolute;\n  left: -99999em;\n  visibility: hidden;\n  top: 0;\n"], ["\n  width: 1px;\n  height: 1px;\n  overflow: hidden;\n  position: absolute;\n  left: -99999em;\n  visibility: hidden;\n  top: 0;\n"]);
+    _templateObject8 = _taggedTemplateLiteralLoose(["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ", "\n"], ["\n  font-family: \"Montserrat\", Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: 600;\n  line-height: 21px;\n  text-align: center;\n  margin: 0;\n  margin-top: 4px;\n\n  ", "\n"]);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
@@ -496,12 +494,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
   };
 
   var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
-  var submitTiny = function submitTiny() {
-    event.preventDefault();
-    var tinyConfirmation = document.getElementsByClassName("tinyletter-confirmation")[0];
-
-    slideDown(tinyConfirmation);
-  };
+  var submitTiny = "window.open('https://tinyletter.com/" + tinyletterUsername + "', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true";
 
   return tinyletterUsername ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     FormWrapper,
@@ -509,11 +502,11 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       outerCard: outerCard,
       action: tinyURL,
       method: "post",
-      target: "tinyletterhider",
-      onSubmit: submitTiny,
+      target: "popupwindow",
+      onsubmit: submitTiny,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 123
       },
       __self: _this
     },
@@ -521,7 +514,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       Form,
       { innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 130
         },
         __self: _this
       },
@@ -529,7 +522,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 138
+            lineNumber: 131
           },
           __self: _this
         },
@@ -539,7 +532,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 141
+            lineNumber: 134
           },
           __self: _this
         },
@@ -549,7 +542,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 147
+            lineNumber: 140
           },
           __self: _this
         },
@@ -563,23 +556,13 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 148
+            lineNumber: 141
           },
           __self: _this
         }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          TinyConfirmation,
-          { className: "tinyletter-confirmation", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 155
-            },
-            __self: _this
-          },
-          "You're almost done! Check your email to confirm subscription."
-        ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "hidden", value: "1", name: "embed", __source: {
             fileName: _jsxFileName,
-            lineNumber: 158
+            lineNumber: 148
           },
           __self: _this
         }),
@@ -587,25 +570,19 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 159
+              lineNumber: 149
             },
             __self: _this
           },
           buttonText ? buttonText : "Subscribe"
         )
       )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TinyIframe, { name: "tinyletterhider", __source: {
-        fileName: _jsxFileName,
-        lineNumber: 164
-      },
-      __self: _this
-    })
+    )
   ) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 167
+        lineNumber: 156
       },
       __self: _this
     },
@@ -613,7 +590,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       Form,
       { onSubmit: submit, innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 168
+          lineNumber: 157
         },
         __self: _this
       },
@@ -621,7 +598,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 169
+            lineNumber: 158
           },
           __self: _this
         },
@@ -631,7 +608,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 172
+            lineNumber: 161
           },
           __self: _this
         },
@@ -641,7 +618,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 178
+            lineNumber: 167
           },
           __self: _this
         },
@@ -655,7 +632,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 179
+            lineNumber: 168
           },
           __self: _this
         }),
@@ -663,7 +640,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 186
+              lineNumber: 175
             },
             __self: _this
           },
@@ -674,7 +651,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormResponse,
         { response: response, style: { color: "#8e8e93" }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 191
+            lineNumber: 180
           },
           __self: _this
         },
@@ -686,7 +663,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 185
         },
         __self: _this
       }),
@@ -696,7 +673,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 203
+          lineNumber: 192
         },
         __self: _this
       })
@@ -749,10 +726,6 @@ var FormButton = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default 
 var FormResponse = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].p(_templateObject8, function (props) {
   return props.response && props.response;
 });
-
-var TinyConfirmation = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].span(_templateObject9);
-
-var TinyIframe = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].iframe(_templateObject10);
 
 /***/ }),
 /* 6 */

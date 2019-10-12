@@ -117,22 +117,15 @@ const NewsletterForm = ({
   };
 
   const tinyURL = `https://tinyletter.com/${tinyletterUsername}`;
-  const submitTiny = () => {
-    event.preventDefault();
-    const tinyConfirmation = document.getElementsByClassName(
-      "tinyletter-confirmation"
-    )[0];
-
-    slideDown(tinyConfirmation);
-  };
+  const submitTiny = `window.open('https://tinyletter.com/${tinyletterUsername}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true`;
 
   return tinyletterUsername ? (
     <FormWrapper
       outerCard={outerCard}
       action={tinyURL}
       method="post"
-      target="tinyletterhider"
-      onSubmit={submitTiny}
+      target="popupwindow"
+      onsubmit={submitTiny}
     >
       <Form innerCard={innerCard}>
         <FormTitle title={title}>
@@ -152,16 +145,12 @@ const NewsletterForm = ({
             aria-label="email"
             subInput={subInput}
           />
-          <TinyConfirmation className="tinyletter-confirmation">
-            You're almost done! Check your email to confirm subscription.
-          </TinyConfirmation>
           <input type="hidden" value="1" name="embed" />
           <FormButton type="submit" subButton={subButton}>
             {buttonText ? buttonText : `Subscribe`}
           </FormButton>
         </SubContainer>
       </Form>
-      <TinyIframe name="tinyletterhider"></TinyIframe>
     </FormWrapper>
   ) : (
     <FormWrapper outerCard={outerCard}>
@@ -337,25 +326,4 @@ const FormResponse = styled.p`
   margin-top: 4px;
 
   ${props => props.response && props.response}
-`;
-
-const TinyConfirmation = styled.span`
-  display: none;
-  float: left;
-  margin: 20px 0;
-  background: green;
-  padding: 20px;
-  color: white;
-  text-shadow: 1px 0 0 black;
-  border-radius: 2px;
-`;
-
-const TinyIframe = styled.iframe`
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  left: -99999em;
-  visibility: hidden;
-  top: 0;
 `;
