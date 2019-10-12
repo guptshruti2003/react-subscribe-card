@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.2.1 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.2.2 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {

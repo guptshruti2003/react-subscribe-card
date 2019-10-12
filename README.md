@@ -14,7 +14,7 @@ Requires React and a Mailchimp or TinyLetter account!
 import React from "react";
 import SubscribeCard from "react-subscribe-card";
 
-const subURL = `[Your Mailchimp subscription URL]`;
+const mailchimpURL = `[Your Mailchimp subscription URL]`;
 
 const outerCardStyle = `
       padding: 0;
@@ -38,7 +38,7 @@ const subButtonStyle = `
 const App = () => (
   <div>
     <SubscribeCard
-      subURL={subURL}
+      mailchimpURL={mailchimpURL}
       outerCardStyle={outerCardStyle}
       subContainerStyle={subContainerStyle}
       subInputStyle={subInputStyle}
