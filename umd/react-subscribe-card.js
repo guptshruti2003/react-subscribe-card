@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.2.4 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v1.2.5 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -571,8 +571,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           TinyConfirmation,
-          {
-            __source: {
+          { className: "tinyletter-confirmation", __source: {
               fileName: _jsxFileName,
               lineNumber: 159
             },

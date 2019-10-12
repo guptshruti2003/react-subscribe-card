@@ -156,7 +156,7 @@ const NewsletterForm = ({
             aria-label="email"
             subInput={subInput}
           />
-          <TinyConfirmation>
+          <TinyConfirmation className="tinyletter-confirmation">
             You're almost done! Check your email to confirm subscription.
           </TinyConfirmation>
           <input type="hidden" value="1" name="embed" />

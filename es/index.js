@@ -170,7 +170,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         }),
         React.createElement(
           TinyConfirmation,
-          null,
+          { className: "tinyletter-confirmation" },
           "You're almost done! Check your email to confirm subscription."
         ),
         React.createElement("input", { type: "hidden", value: "1", name: "embed" }),
