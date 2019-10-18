@@ -28,7 +28,8 @@ var SubscribeCard = function SubscribeCard(_ref) {
       subInputStyle = _ref.subInputStyle,
       buttonText = _ref.buttonText,
       subButtonStyle = _ref.subButtonStyle,
-      responseStyle = _ref.responseStyle;
+      responseStyle = _ref.responseStyle,
+      emailPlaceholder = _ref.emailPlaceholder;
 
   return mailchimpURL ? React.createElement(MailchimpSubscribe, {
     url: mailchimpURL,
@@ -52,7 +53,8 @@ var SubscribeCard = function SubscribeCard(_ref) {
         subInput: subInputStyle,
         subButton: subButtonStyle,
         buttonText: buttonText,
-        response: responseStyle
+        response: responseStyle,
+        emailPlaceholder: emailPlaceholder
       });
     }
   }) : tinyletterUsername ? React.createElement(NewsletterForm, {
@@ -64,7 +66,8 @@ var SubscribeCard = function SubscribeCard(_ref) {
     subContainer: subContainerStyle,
     subInput: subInputStyle,
     subButton: subButtonStyle,
-    response: responseStyle
+    response: responseStyle,
+    emailPlaceholder: emailPlaceholder
   }) : React.createElement(NewsletterForm, {
     outerCard: outerCardStyle,
     innerCard: innerCardStyle,
@@ -73,7 +76,8 @@ var SubscribeCard = function SubscribeCard(_ref) {
     subContainer: subContainerStyle,
     subInput: subInputStyle,
     subButton: subButtonStyle,
-    response: responseStyle
+    response: responseStyle,
+    emailPlaceholder: emailPlaceholder
   });
 };
 
@@ -86,7 +90,8 @@ SubscribeCard.propTypes = process.env.NODE_ENV !== "production" ? {
   subContainerStyle: PropTypes.string,
   subInputStyle: PropTypes.string,
   subButtonStyle: PropTypes.string,
-  responseStyle: PropTypes.string
+  responseStyle: PropTypes.string,
+  emailPlaceholder: PropTypes.string
 } : {};
 
 export default SubscribeCard;
@@ -106,7 +111,8 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       subInput = _ref3.subInput,
       subButton = _ref3.subButton,
       buttonText = _ref3.buttonText,
-      response = _ref3.response;
+      response = _ref3.response,
+      emailPlaceholder = _ref3.emailPlaceholder;
 
   var email = void 0;
   var submit = function submit(event) {
@@ -118,6 +124,8 @@ var NewsletterForm = function NewsletterForm(_ref3) {
 
   var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
   var submitTiny = "window.open('https://tinyletter.com/" + tinyletterUsername + "', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true";
+
+  var placeholder = emailPlaceholder ? emailPlaceholder : "Your email";
 
   return tinyletterUsername ? React.createElement(
     FormWrapper,
@@ -148,7 +156,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           id: "tlemail",
           type: "email",
           name: "email",
-          placeholder: "Your email",
+          placeholder: placeholder,
           "aria-label": "email",
           subInput: subInput
         }),
@@ -184,7 +192,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
             return email = node;
           },
           type: "email",
-          placeholder: "Your email",
+          placeholder: placeholder,
           "aria-label": "email",
           subInput: subInput
         }),
@@ -224,7 +232,8 @@ NewsletterForm.propTypes = process.env.NODE_ENV !== "production" ? {
   subContainer: PropTypes.string,
   subInput: PropTypes.string,
   subButton: PropTypes.string,
-  response: PropTypes.string
+  response: PropTypes.string,
+  emailPlaceholder: PropTypes.string
 } : {};
 
 var FormWrapper = styled.div(_templateObject, function (props) {

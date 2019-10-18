@@ -17,7 +17,8 @@ const SubscribeCard = ({
   subInputStyle,
   buttonText,
   subButtonStyle,
-  responseStyle
+  responseStyle,
+  emailPlaceholder
 }) => {
   return mailchimpURL ? (
     <MailchimpSubscribe
@@ -38,6 +39,7 @@ const SubscribeCard = ({
           subButton={subButtonStyle}
           buttonText={buttonText}
           response={responseStyle}
+          emailPlaceholder={emailPlaceholder}
         />
       )}
     />
@@ -52,6 +54,7 @@ const SubscribeCard = ({
       subInput={subInputStyle}
       subButton={subButtonStyle}
       response={responseStyle}
+      emailPlaceholder={emailPlaceholder}
     />
   ) : (
     <NewsletterForm
@@ -63,6 +66,7 @@ const SubscribeCard = ({
       subInput={subInputStyle}
       subButton={subButtonStyle}
       response={responseStyle}
+      emailPlaceholder={emailPlaceholder}
     />
   );
 };
@@ -76,7 +80,8 @@ SubscribeCard.propTypes = {
   subContainerStyle: PropTypes.string,
   subInputStyle: PropTypes.string,
   subButtonStyle: PropTypes.string,
-  responseStyle: PropTypes.string
+  responseStyle: PropTypes.string,
+  emailPlaceholder: PropTypes.string
 };
 
 export default SubscribeCard;
@@ -96,7 +101,8 @@ const NewsletterForm = ({
   subInput,
   subButton,
   buttonText,
-  response
+  response,
+  emailPlaceholder
 }) => {
   let email;
   const submit = event => {
@@ -112,6 +118,8 @@ const NewsletterForm = ({
 
   const tinyURL = `https://tinyletter.com/${tinyletterUsername}`;
   const submitTiny = `window.open('https://tinyletter.com/${tinyletterUsername}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true`;
+
+  const placeholder = emailPlaceholder ? emailPlaceholder : "Your email";
 
   return tinyletterUsername ? (
     <FormWrapper outerCard={outerCard}>
@@ -136,7 +144,7 @@ const NewsletterForm = ({
             id="tlemail"
             type="email"
             name="email"
-            placeholder="Your email"
+            placeholder={placeholder}
             aria-label="email"
             subInput={subInput}
           />
@@ -163,7 +171,7 @@ const NewsletterForm = ({
           <FormInput
             ref={node => (email = node)}
             type="email"
-            placeholder="Your email"
+            placeholder={placeholder}
             aria-label="email"
             subInput={subInput}
           />
@@ -206,7 +214,8 @@ NewsletterForm.propTypes = {
   subContainer: PropTypes.string,
   subInput: PropTypes.string,
   subButton: PropTypes.string,
-  response: PropTypes.string
+  response: PropTypes.string,
+  emailPlaceholder: PropTypes.string
 };
 
 const FormWrapper = styled.div`

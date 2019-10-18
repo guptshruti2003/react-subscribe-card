@@ -15,4 +15,5 @@ export interface Props {
   subInput: string
   subButton: string
   response: string
+  emailPlaceholder: string
 }
