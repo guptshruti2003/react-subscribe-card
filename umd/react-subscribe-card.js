@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v1.5.0 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v2.0.1 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -488,16 +488,13 @@ var NewsletterForm = function NewsletterForm(_ref3) {
   };
 
   var tinyURL = "https://tinyletter.com/" + tinyletterUsername;
-  var submitTiny = function submitTiny() {
-    window.open("https://tinyletter.com/" + tinyletterUsername);
-    return true;
-  };
+  var submitTiny = "window.open('https://tinyletter.com/" + tinyletterUsername + "', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true";
 
   return tinyletterUsername ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 117
       },
       __self: _this
     },
@@ -508,10 +505,10 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         action: tinyURL,
         method: "post",
         target: "popupwindow",
-        onSubmit: submitTiny,
+        onsubmit: submitTiny,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 118
         },
         __self: _this
       },
@@ -519,7 +516,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 128
+            lineNumber: 125
           },
           __self: _this
         },
@@ -529,7 +526,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 131
+            lineNumber: 128
           },
           __self: _this
         },
@@ -539,7 +536,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 137
+            lineNumber: 134
           },
           __self: _this
         },
@@ -552,13 +549,13 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 138
+            lineNumber: 135
           },
           __self: _this
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "hidden", value: "1", name: "embed", __source: {
             fileName: _jsxFileName,
-            lineNumber: 146
+            lineNumber: 143
           },
           __self: _this
         }),
@@ -566,7 +563,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", value: "Subscribe", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 147
+              lineNumber: 144
             },
             __self: _this
           },
@@ -578,7 +575,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 154
+        lineNumber: 151
       },
       __self: _this
     },
@@ -586,7 +583,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       Form,
       { onSubmit: submit, innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 155
+          lineNumber: 152
         },
         __self: _this
       },
@@ -594,7 +591,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 156
+            lineNumber: 153
           },
           __self: _this
         },
@@ -604,7 +601,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 159
+            lineNumber: 156
           },
           __self: _this
         },
@@ -614,7 +611,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 165
+            lineNumber: 162
           },
           __self: _this
         },
@@ -628,7 +625,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 166
+            lineNumber: 163
           },
           __self: _this
         }),
@@ -636,7 +633,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 173
+              lineNumber: 170
             },
             __self: _this
           },
@@ -647,7 +644,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormResponse,
         { response: response, style: { color: "#8e8e93" }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 178
+            lineNumber: 175
           },
           __self: _this
         },
@@ -659,7 +656,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 180
         },
         __self: _this
       }),
@@ -669,7 +666,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 187
         },
         __self: _this
       })
@@ -696,7 +693,7 @@ var FormWrapper = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default
 });
 
 var Form = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].form(_templateObject2, function (props) {
-  return props.outerCard && props.innerCard;
+  return props.innerCard && props.innerCard;
 });
 
 var FormTitle = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].h3(_templateObject3, function (props) {
