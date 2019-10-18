@@ -92,6 +92,11 @@ _Note: Only use `mailchimpURL` or `tinyletterUsername` prop. If you use both, `m
   - Description of your card
   - default: "Subscribe and I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on."
 
+- `emailPlaceholder`: `String`
+
+  - Placholder for user input email
+  - default: "Your Email"
+
 - `buttonText`: `String`
 
   - Text of the submit button
