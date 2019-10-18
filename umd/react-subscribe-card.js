@@ -1,5 +1,5 @@
 /*!
- * react-subscribe-card v2.0.2 - https://github.com/thomaswangio/react-subscribe-card
+ * react-subscribe-card v2.1.0 - https://github.com/thomaswangio/react-subscribe-card
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -423,10 +423,13 @@ var SubscribeCard = function SubscribeCard(_ref) {
     outerCard: outerCardStyle,
     innerCard: innerCardStyle,
     title: titleStyle,
+    titleText: title,
     description: descriptionStyle,
+    descriptionText: description,
     subContainer: subContainerStyle,
     subInput: subInputStyle,
     subButton: subButtonStyle,
+    buttonText: buttonText,
     response: responseStyle,
     emailPlaceholder: emailPlaceholder,
     __source: {
@@ -438,15 +441,18 @@ var SubscribeCard = function SubscribeCard(_ref) {
     outerCard: outerCardStyle,
     innerCard: innerCardStyle,
     title: titleStyle,
+    titleText: title,
     description: descriptionStyle,
+    descriptionText: description,
     subContainer: subContainerStyle,
     subInput: subInputStyle,
     subButton: subButtonStyle,
+    buttonText: buttonText,
     response: responseStyle,
     emailPlaceholder: emailPlaceholder,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 63
     },
     __self: _this
   });
@@ -502,7 +508,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 131
       },
       __self: _this
     },
@@ -516,7 +522,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         onsubmit: submitTiny,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 132
         },
         __self: _this
       },
@@ -524,7 +530,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 133
+            lineNumber: 139
           },
           __self: _this
         },
@@ -534,7 +540,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 136
+            lineNumber: 142
           },
           __self: _this
         },
@@ -544,7 +550,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 142
+            lineNumber: 148
           },
           __self: _this
         },
@@ -557,13 +563,13 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 149
           },
           __self: _this
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "hidden", value: "1", name: "embed", __source: {
             fileName: _jsxFileName,
-            lineNumber: 151
+            lineNumber: 157
           },
           __self: _this
         }),
@@ -571,7 +577,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", value: "Subscribe", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 152
+              lineNumber: 158
             },
             __self: _this
           },
@@ -583,7 +589,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
     FormWrapper,
     { outerCard: outerCard, __source: {
         fileName: _jsxFileName,
-        lineNumber: 159
+        lineNumber: 165
       },
       __self: _this
     },
@@ -591,7 +597,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
       Form,
       { onSubmit: submit, innerCard: innerCard, __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 166
         },
         __self: _this
       },
@@ -599,7 +605,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormTitle,
         { title: title, __source: {
             fileName: _jsxFileName,
-            lineNumber: 161
+            lineNumber: 167
           },
           __self: _this
         },
@@ -609,7 +615,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormDescription,
         { description: description, __source: {
             fileName: _jsxFileName,
-            lineNumber: 164
+            lineNumber: 170
           },
           __self: _this
         },
@@ -619,7 +625,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         SubContainer,
         { subContainer: subContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 170
+            lineNumber: 176
           },
           __self: _this
         },
@@ -633,7 +639,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           subInput: subInput,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 171
+            lineNumber: 177
           },
           __self: _this
         }),
@@ -641,7 +647,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
           FormButton,
           { type: "submit", subButton: subButton, __source: {
               fileName: _jsxFileName,
-              lineNumber: 178
+              lineNumber: 184
             },
             __self: _this
           },
@@ -652,7 +658,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         FormResponse,
         { response: response, style: { color: "#8e8e93" }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 183
+            lineNumber: 189
           },
           __self: _this
         },
@@ -664,7 +670,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 194
         },
         __self: _this
       }),
@@ -674,7 +680,7 @@ var NewsletterForm = function NewsletterForm(_ref3) {
         dangerouslySetInnerHTML: { __html: message },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 201
         },
         __self: _this
       })

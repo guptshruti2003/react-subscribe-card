@@ -49,10 +49,13 @@ const SubscribeCard = ({
       outerCard={outerCardStyle}
       innerCard={innerCardStyle}
       title={titleStyle}
+      titleText={title}
       description={descriptionStyle}
+      descriptionText={description}
       subContainer={subContainerStyle}
       subInput={subInputStyle}
       subButton={subButtonStyle}
+      buttonText={buttonText}
       response={responseStyle}
       emailPlaceholder={emailPlaceholder}
     />
@@ -61,10 +64,13 @@ const SubscribeCard = ({
       outerCard={outerCardStyle}
       innerCard={innerCardStyle}
       title={titleStyle}
+      titleText={title}
       description={descriptionStyle}
+      descriptionText={description}
       subContainer={subContainerStyle}
       subInput={subInputStyle}
       subButton={subButtonStyle}
+      buttonText={buttonText}
       response={responseStyle}
       emailPlaceholder={emailPlaceholder}
     />

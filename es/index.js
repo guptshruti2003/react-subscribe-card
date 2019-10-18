@@ -62,20 +62,26 @@ var SubscribeCard = function SubscribeCard(_ref) {
     outerCard: outerCardStyle,
     innerCard: innerCardStyle,
     title: titleStyle,
+    titleText: title,
     description: descriptionStyle,
+    descriptionText: description,
     subContainer: subContainerStyle,
     subInput: subInputStyle,
     subButton: subButtonStyle,
+    buttonText: buttonText,
     response: responseStyle,
     emailPlaceholder: emailPlaceholder
   }) : React.createElement(NewsletterForm, {
     outerCard: outerCardStyle,
     innerCard: innerCardStyle,
     title: titleStyle,
+    titleText: title,
     description: descriptionStyle,
+    descriptionText: description,
     subContainer: subContainerStyle,
     subInput: subInputStyle,
     subButton: subButtonStyle,
+    buttonText: buttonText,
     response: responseStyle,
     emailPlaceholder: emailPlaceholder
   });
