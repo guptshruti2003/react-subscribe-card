@@ -247,7 +247,8 @@ const Form = styled.form`
 `;
 
 const FormTitle = styled.h3`
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 30px;
   font-weight: 800;
   margin: 0 0 10px 0;
@@ -258,7 +259,8 @@ const FormTitle = styled.h3`
 `;
 
 const FormDescription = styled.p`
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 15px;
   font-weight: 400;
   line-height: 21px;
@@ -279,7 +281,8 @@ const SubContainer = styled.div`
 `;
 
 const FormInput = styled.input`
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #fdfdfd;
   color: #333333;
   border-color: #f2f2f2;
@@ -304,7 +307,8 @@ const FormInput = styled.input`
 `;
 
 const FormButton = styled.button`
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #000000;
   border: none;
   border-radius: 25px;
@@ -327,7 +331,8 @@ const FormButton = styled.button`
 `;
 
 const FormResponse = styled.p`
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 15px;
   font-weight: 600;
   line-height: 21px;
