@@ -18,7 +18,7 @@ const SubscribeCard = ({
   buttonText,
   subButtonStyle,
   responseStyle,
-  emailPlaceholder
+  emailPlaceholder,
 }) => {
   return mailchimpURL ? (
     <MailchimpSubscribe
@@ -27,7 +27,7 @@ const SubscribeCard = ({
         <NewsletterForm
           status={status}
           message={message}
-          onValidated={formData => subscribe(formData)}
+          onValidated={(formData) => subscribe(formData)}
           outerCard={outerCardStyle}
           innerCard={innerCardStyle}
           title={titleStyle}
@@ -87,7 +87,7 @@ SubscribeCard.propTypes = {
   subInputStyle: PropTypes.string,
   subButtonStyle: PropTypes.string,
   responseStyle: PropTypes.string,
-  emailPlaceholder: PropTypes.string
+  emailPlaceholder: PropTypes.string,
 };
 
 export default SubscribeCard;
@@ -108,16 +108,16 @@ const NewsletterForm = ({
   subButton,
   buttonText,
   response,
-  emailPlaceholder
+  emailPlaceholder,
 }) => {
   let email;
-  const submit = event => {
+  const submit = (event) => {
     event.preventDefault();
     return (
       email &&
       email.value.indexOf("@") > -1 &&
       onValidated({
-        EMAIL: email.value
+        EMAIL: email.value,
       })
     );
   };
@@ -175,7 +175,7 @@ const NewsletterForm = ({
         </FormDescription>
         <SubContainer subContainer={subContainer}>
           <FormInput
-            ref={node => (email = node)}
+            ref={(node) => (email = node)}
             type="email"
             placeholder={placeholder}
             aria-label="email"
@@ -221,7 +221,7 @@ NewsletterForm.propTypes = {
   subInput: PropTypes.string,
   subButton: PropTypes.string,
   response: PropTypes.string,
-  emailPlaceholder: PropTypes.string
+  emailPlaceholder: PropTypes.string,
 };
 
 const FormWrapper = styled.div`
@@ -234,7 +234,7 @@ const FormWrapper = styled.div`
   max-width: 90%;
   width: 550px;
 
-  ${props => props.outerCard && props.outerCard}
+  ${(props) => props.outerCard && props.outerCard}
 `;
 
 const Form = styled.form`
@@ -243,31 +243,31 @@ const Form = styled.form`
   padding: 20px;
   margin: 0;
 
-  ${props => props.innerCard && props.innerCard}
+  ${(props) => props.innerCard && props.innerCard}
 `;
 
 const FormTitle = styled.h3`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   font-size: 30px;
   font-weight: 800;
   margin: 0 0 10px 0;
   text-align: left;
   word-break: break-word;
 
-  ${props => props.title && props.title}
+  ${(props) => props.title && props.title}
 `;
 
 const FormDescription = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 21px;
   margin: 0 0 10px 0;
   text-align: left;
 
-  ${props => props.description && props.description}
+  ${(props) => props.description && props.description}
 `;
 
 const SubContainer = styled.div`
@@ -277,12 +277,12 @@ const SubContainer = styled.div`
     flex-direction: column;
   }
 
-  ${props => props.subContainer && props.subContainer}
+  ${(props) => props.subContainer && props.subContainer}
 `;
 
 const FormInput = styled.input`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   background-color: #fdfdfd;
   color: #333333;
   border-color: #f2f2f2;
@@ -303,12 +303,12 @@ const FormInput = styled.input`
     width: 100%;
   }
 
-  ${props => props.subInput && props.subInput}
+  ${(props) => props.subInput && props.subInput}
 `;
 
 const FormButton = styled.button`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   background-color: #000000;
   border: none;
   border-radius: 25px;
@@ -327,12 +327,12 @@ const FormButton = styled.button`
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
   }
 
-  ${props => props.subButton && props.subButton}
+  ${(props) => props.subButton && props.subButton}
 `;
 
 const FormResponse = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 21px;
@@ -340,5 +340,5 @@ const FormResponse = styled.p`
   margin: 0;
   margin-top: 4px;
 
-  ${props => props.response && props.response}
+  ${(props) => props.response && props.response}
 `;

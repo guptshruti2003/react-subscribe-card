@@ -134,7 +134,7 @@ This component is styled using styled-components. Reference the [styled-componen
 
   ```js
   // default
-  `font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  `font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 30px;
   font-weight: 800;
   margin: 0 0 10px 0;
@@ -146,7 +146,7 @@ This component is styled using styled-components. Reference the [styled-componen
 
   ```js
   // default
-  `font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  `font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 21px;
@@ -169,7 +169,7 @@ This component is styled using styled-components. Reference the [styled-componen
 
   ```js
   // default
-  `font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  `font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #fdfdfd;
   color: #333333;
   border-color: #f2f2f2;
@@ -195,7 +195,7 @@ This component is styled using styled-components. Reference the [styled-componen
 
   ```js
   // default
-  `font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  `font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #000000;
   border: none;
   border-radius: 25px;
@@ -218,7 +218,7 @@ This component is styled using styled-components. Reference the [styled-componen
 - `responseStyle`: `String`
   ```js
   // default
-  `font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  `font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 21px;
