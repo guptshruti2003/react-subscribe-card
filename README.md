@@ -229,4 +229,4 @@ This component is using styled-components. Reference the [styled-components webs
 
 ## License
 
-MIT © [thomaswangio](https://github.com/thomaswangio)
+MIT © [thomaswang](https://github.com/thomaswang)
