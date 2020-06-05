@@ -68,7 +68,7 @@ npm install --save react-subscribe-card
 
 ```
 # ES6 import
-import GradientButton from 'react-native-gradient-buttons';
+import SubscribeCard from "react-subscribe-card"
 ```
 
 ## Props
@@ -104,7 +104,7 @@ _Note: Only use `mailchimpURL` or `tinyletterUsername` prop. If you use both, `m
 
 #### The following props are strings, but you must format as CSS to override the default styles
 
-This component is styled using styled-components. Reference the [styled-components website](https://www.styled-components.com/) to see more on specific formatting. You can [nest rules just like Sass](https://www.styled-components.com/docs/faqs#can-i-nest-rules).
+This component is using styled-components. Reference the [styled-components website](https://www.styled-components.com/) to see more on specific formatting. You can [nest rules just like Sass](https://www.styled-components.com/docs/faqs#can-i-nest-rules).
 
 - `outerCardStyle`: `String`
 
